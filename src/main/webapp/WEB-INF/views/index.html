@@ -1,0 +1,31 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link type="text/css" rel="stylesheet" href="style/table.css">
+    <title>Accident</title>
+    <style>
+        body {
+            background: url(./style/images/phone.png);
+        }
+    </style>
+</head>
+<body>
+<h1 align="center">Магазин книг</h1>
+<table width="80%" cellpadding="5" align="center">
+        <tr>
+            <th>Название книги</th>
+            <th>Автор</th>
+            <th>Цена</th>
+            <th>Количество</th>
+            <th>Оценка</th>
+        </tr>
+        <tr th:each="book : ${books}">
+            <td th:text="${book.name}" align="center"></td>
+            <td th:text="${book.author.name}" align="center"></td>
+            <td th:text="${book.price}" align="center"></td>
+            <td th:text="${book.amount}" align="center"></td>
+            <td th:text="${book.points}" align="center"></td>
+        </tr>
+</table>
+</body>
+</html>
